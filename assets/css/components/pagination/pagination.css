@@ -1,0 +1,117 @@
+/* ===== PAGINATION COMPONENT ===== */
+
+/* Base Pagination Styles */
+.pagination {
+    margin: var(--spacing-md) 0;
+}
+
+.pagination__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--spacing-xs);
+}
+
+.pagination__item {
+    margin: 0;
+}
+
+.pagination__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 var(--spacing-sm);
+    border: 1px solid var(--color-light-dark);
+    color: var(--text-medium);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.pagination__link:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+.pagination__link--active {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    border-color: var(--color-primary);
+}
+
+.pagination__link--prev,
+.pagination__link--next {
+    padding: 0 var(--spacing-md);
+}
+
+.pagination__item--ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    color: var(--text-medium);
+}
+
+/* Pagination Variant 2: Rounded */
+.pagination--rounded .pagination__link {
+    border-radius: var(--border-radius-md);
+}
+
+/* Pagination Variant 3: Icons */
+.pagination--icons .pagination__link--prev,
+.pagination--icons .pagination__link--next {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* Pagination Variant 4: Compact */
+.pagination--compact .pagination__link {
+    min-width: 2rem;
+    height: 2rem;
+    font-size: var(--font-size-sm);
+}
+
+.pagination--compact .pagination__link--prev,
+.pagination--compact .pagination__link--next {
+    padding: 0 var(--spacing-sm);
+}
+
+/* Pagination Variant 5: Background */
+.pagination--background {
+    background-color: var(--color-light);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+}
+
+.pagination--background .pagination__link {
+    border: none;
+    background-color: var(--text-white);
+}
+
+.pagination--background .pagination__link--active {
+    background-color: var(--color-primary);
+    color: var(--text-white);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pagination__list {
+        justify-content: center;
+    }
+    
+    .pagination__link {
+        min-width: 2rem;
+        height: 2rem;
+        font-size: var(--font-size-sm);
+    }
+    
+    .pagination__link--prev,
+    .pagination__link--next {
+        padding: 0 var(--spacing-sm);
+    }
+}

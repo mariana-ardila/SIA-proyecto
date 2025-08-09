@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración de Perfil del Profesor</title>
+   <link rel="stylesheet" href="../assets/css/configuracion.css">
+   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+     
+     <style>
+    body {
+      font-family: orbitron, sans-serif;
+      background-color: #00b78631;
+      padding: 40px;
+       }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius:10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      background-color: #00b785;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background-color 0.3s;
+      color: black;
+      font-weight: bold;
+
+    }
+
+    input[type="submit"]:hover {
+      background-color: #daeae6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Configuración de Perfil del Profesor</h2>
+    <form action="/guardar-perfil-profesor" method="POST">
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono de contacto:</label>
+        <input type="tel" id="telefono" name="telefono">
+      </div>
+
+      <div class="form-group">
+        <label for="especialidad">Especialidad:</label>
+        <input type="text" id="especialidad" name="especialidad" required>
+      </div>
+
+      <div class="form-group">
+        <label for="experiencia">Años de experiencia:</label>
+        <select id="experiencia" name="experiencia">
+          <option value="0-1">0-1 años</option>
+          <option value="2-5">2-5 años</option>
+          <option value="6-10">6-10 años</option>
+          <option value="10+">Más de 10 años</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="asignaturas">Asignaturas impartidas:</label>
+        <textarea id="asignaturas" name="asignaturas" placeholder="Ej: Matemáticas, Física, Química..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="horario">Horario de disponibilidad:</label>
+        <textarea id="horario" name="horario" placeholder="Ej: Lunes a viernes de 8:00 a 14:00"></textarea>
+      </div>
+
+      <input type="submit" value="Guardar configuración">
+    </form>
+  </div>
+  <!-- Barra de ayuda -->
+  <div class="barra-ayuda">
+    <a href="https://www.youtube.com/watch?v=x3Zyt-L4Y3I">Guia de configuracion</a>
+        <a href="mailto:soporte@tusitio.com">Correo Soporte</a>
+    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+    <a href="../index.html">Salir</a>
+  </div>
+</form>
+
+</body>
+</html>

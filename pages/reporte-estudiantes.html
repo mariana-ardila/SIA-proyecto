@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Notas</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="../assets/css/estudiante.css" />
+
+    <!-- Estilos internos -->
+    <style>
+      * {
+        font-family: "Orbitron", sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #00b78631;
+        min-height: 100vh;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* HEADER */
+     .header {
+            display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        box-shadow: 0.2rem 0.2rem 1rem rgb(153, 151, 151);
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 13;
+      }
+
+      .header__evalix {
+        height: 110px;
+        object-fit: contain;
+      }
+
+      .header__evalix:hover {
+        background-color: #00b78625;
+        transform: scale(1.1);
+        transition: 2s;
+        box-shadow: 0 0 20px rgba(19, 184, 184, 0.69);
+        border-radius: 20px;
+      }
+
+      .header__sesion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1rem;
+        gap: 0.5rem;
+      }
+
+      .logosesion {
+        height: 47px;
+        max-width: 55%;
+        object-fit: contain;
+        margin-top: 12px;
+      }
+
+      .logosesion:hover {
+        transform: scale(1.3);
+        transition: 2s;
+      }
+
+      .textsesion {
+        text-align: center;
+        padding: 6px;
+        border: 2px solid #00b786a9;
+        border-radius: 20px;
+        background-color: aliceblue;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: black;
+      }
+
+      .textsesion:hover {
+        background-color: #00b78625;
+        transform: scale(1.2);
+        transition: 2s;
+        box-shadow: 0 0 20px rgba(19, 184, 184, 0.69);
+      }
+
+      .container-main{
+  display: flex;
+  flex-direction: column;
+  gap: 13rem;
+}
+.main {
+ display: flex;
+ flex-direction: row;
+  gap:10rem;
+  margin-top: 8rem;
+}
+
+      /* NAVBAR */
+      .navbar {
+        position: fixed;
+        background-color: #00b78630;
+        display: flex;
+        flex-direction: column;
+         justify-content: center; 
+  align-items: center;    
+        height: 15rem;
+        width: 15rem;
+        border: solid 2px #fff;
+        border-radius: 1rem;
+        box-shadow: 0.5rem 0.3rem 1rem rgb(88, 88, 88);
+        margin-top:2rem ;
+        z-index: 10;
+      }
+
+      .navbar__list {
+align-self: center;  
+  }
+
+      .navbar__item {
+        list-style: none;
+        background-color: #fff;
+        width: 12rem;
+        padding: 0.8rem;
+        margin: 2rem;
+        border: solid #00b785 2px;
+        border-radius: 0.8rem;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      .navbar__item:hover {
+        background-color: #00b7864e;
+        transform: scale(1.2);
+        transition: 2s;
+        box-shadow: 0 0 20px rgba(19, 184, 184, 0.95);
+      }
+
+      .navbar__link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      /* CONTENIDO PRINCIPAL */
+      .main__principal {
+        margin-left: 18rem;
+        margin-top: 3.5rem;
+        border-radius: 15px;
+        width: 70%;
+      }
+
+      /* BLOQUE DE INFORMACIÓN DEL ESTUDIANTE */
+      .information-block {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 1rem 0.5rem 1.5rem rgb(158, 157, 157);
+        margin: 2rem 0.3rem;
+        margin-top: -1.5rem;
+      }
+
+      .information-block__title {
+        background-color: #00b785;
+        color: white;
+        padding: 0.7rem;
+        font-size: 1.4rem;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .information-block__teacher {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0.8rem 1rem;
+      }
+
+      .information-block__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .information-block__data p {
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+
+      .information-block__updata {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #00b78635;
+        border-radius: 1rem;
+        padding: 0.3rem 0.1rem;
+      }
+
+      .information-block__user-icon {
+        height: 100px;
+        object-fit: contain;
+      }
+
+      .information-block__bottom {
+        margin-top: 1rem;
+        padding: 0.5rem;
+        border: 2px dotted rgba(2, 84, 84, 0.605);
+        border-radius: 7px;
+        background-color: aliceblue;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .information-block__bottom:hover {
+        background-color: #00b7864e;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(19, 207, 192, 0.6);
+      }
+
+      /* SECCIÓN NOTAS */
+      .information-notas {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2rem 0.8rem;
+        box-shadow: 0.5rem 0.3rem 1rem rgb(88, 88, 88);
+      }
+
+      .filters-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        background-color: #00b785;
+        width: 80%;
+        margin: 2rem auto;
+        padding: 0.7rem;
+        border-radius: 13px;
+        height: 3.4rem;
+      }
+
+      .filters-row select,
+      .filters-row button {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .tabla__titulo {
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+        background-color: #00b785;
+        padding: 0.5rem 0.1rem;
+        margin: 0.7rem auto;
+        border-radius: 10px;
+        width: 100%;
+        color: white;
+      }
+
+      .container-principal {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container-principal__imagen {
+        width: 100%;
+        height: 100%;
+      }
+
+      .container-principal__buttom {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: cyan;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        border: 2px solid black;
+        transition: 0.3s ease;
+      }
+
+      .container-principal__buttom:hover {
+        box-shadow: 0 0 6px cyan, 0 0 25px cyan, 0 0 50px cyan;
+        transform: translateY(-2px);
+      }
+
+      .mensaje-descarga {
+        margin-top: 0.5rem;
+        color: green;
+        font-weight: bold;
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        background: #636669;
+        color: white;
+        align-items: center;
+        font-size: 1rem;
+        width: 100%;
+  height: 8rem;
+  font-weight: bold;
+      }
+      
+
+      .texto-a {
+        padding: 0.75rem 1.5rem;
+        background-color: cyan;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        border: 2px solid black;
+        transition: 0.3s ease;
+      }
+
+      .texto-a:hover {
+        box-shadow: 0 0 6px cyan, 0 0 25px cyan, 0 0 50px cyan;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 700px) {
+        header {
+          flex-direction: column;
+        }
+
+        .header__sesion {
+          margin-top: 1rem;
+        }
+
+        .information-block__teacher,
+        .filters-row {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .container-principal {
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 5px solid white;
+  background-color: #00b785;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container-principal__formulario {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-principal__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 7rem;
+}
+
+.container-principal__item {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.container-principal__label {
+  background-color: rgb(255, 255, 255);
+  padding: 0.3rem;
+  font-weight: bold;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.container-principal__label:hover {
+  background-color: rgba(19, 184, 184, 0.605);
+}
+
+.container-principal__imagen {
+  height: 90%; /* Ajusta la altura, no el ancho */
+  max-width: 100%; /* Evita que se desborde */
+  object-fit: contain;
+}
+.container-principal__buttom {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px white dotted;
+  background-color: aliceblue;
+  font-size: 0.74rem;
+  font-weight: bold;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  transition: background-color 0.3s ease;
+  color: black;
+  text-decoration: none;
+}
+
+.container-principal__buttom:hover {
+   background-color: #00b78625;
+  transform: scale(1.1);
+  transition: 2s;
+  box-shadow: 0 0 20px rgba(19, 184, 184, 0.69);
+  border-radius: 20px;
+}
+
+.mensaje-descarga {
+  display: none;
+  color:  #00b785;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 1rem;
+}
+.container-principal__buttom:hover + .mensaje-descarga {
+  display: block;
+}
+
+.neon-info-hi {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1px 1px;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(78, 205, 197, 0.01);
+  transition: all 0.9s ease;
+}
+
+.neon-info-hi:hover {
+  box-shadow: 0 0 35px rgba(88, 236, 226, 0.95);
+  transform: translateY(-11px);
+}
+
+.neon-info-hi::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(9px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.neon-info-hi:hover::before {
+  opacity: 0.9;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  10% {
+    background-position: 100% 0;
+  }
+  20% {
+    background-position: 200% 0;
+  }
+  30% {
+    background-position: 300% 0;
+  }
+  50% {
+    background-position: 830% 0;
+  }
+  70% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <img class="header__evalix" src="../assets/imagenes/evalix.png" alt="Logo de evalix" />
+      </a>
+      <h1 style="color: #00b785">Bienvenido Alumno</h1>
+      <div class="header__sesion">
+        <img class="logosesion" src="../assets/imagenes/cerrar-sesion.png" alt="Cerrar sesión" />
+        <a href="../index.html"><span class="textsesion">Cerrar sesión</span></a>
+      </div>
+    </header>
+
+    <div class="container-main">
+      <main class="main">
+        <aside class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__link" href="../pages-main/estudiante.html">Notas</a></li>
+          </ul>
+        </aside>
+
+        <div class="main__principal">
+          <div class="information-block">
+            <h2 class="information-block__title">Información Estudiante</h2>
+            <div class="information-block__teacher">
+              <div class="information-block__data">
+                <p>Nombre: Luisa Contreras Gómez</p>
+                <p>Cédula: 100243090</p>
+                <p>Género: Femenino</p>
+                <p>Correo: lu23@uniedu.co.co</p>
+              </div>
+              <div class="information-block__updata">
+                <img class="information-block__user-icon" src="../assets/imagenes/usuario.png" alt="Icono usuario" />
+                <label class="information-block__bottom">
+                  Actualizar Foto
+                  <input type="file" style="display: none" />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="information-notas">
+            <h1 class="tabla__titulo">📊 Gráfico de Rendimiento Académico</h1>
+            <div class="filters-row">
+              <select id="filterMateria">
+                <option value="">Materias</option>
+                <option value="">Matemáticas</option>
+                <option value="">Lengua</option>
+                <option value="">Ciencias</option>
+                <option value="">Historia</option>
+                <option value="">Inglés</option>
+              </select>
+              <select id="filterSemestre">
+                <option value="">Semestres</option>
+                <option value="2024-1">2025-I</option>
+                <option value="2024-2">2025-II</option>
+                <option value="2025-1">2026-I</option>
+              </select>
+            </div>
+
+<div class="container-principal neon-info-hi">
+            <img class="container-principal__imagen" src="../assets/imagenes/promedio_luisa.png" alt="Imagen principal">
+             <a href="reporte-notas.pdf" class="container-principal__buttom" download>
+      📥 Descargar reporte de notas (PDF)</a>
+    <p class="mensaje-descarga">✔️ El reporte ha sido descargado.</p>
+
+        </div>
+          </div>
+        </div>
+      </main>
+
+    <footer>
+      <section class="cta">
+        <p>
+          &copy; 2025 Evalix. Todos los derechos reservados. | Políticas de
+          privacidad | Términos y condiciones
+        </p>
+      </section>
+    </footer>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+/* ===== ALERTS COMPONENT ===== */
+
+/* Base Alert Styles */
+.alert {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    position: relative;
+}
+
+.alert__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.alert__title {
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+}
+
+.alert__text {
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+.alert__icon {
+    display: inline-block;
+    margin-right: var(--spacing-sm);
+    font-weight: bold;
+}
+
+.alert__close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Alert Variants by Type */
+.alert--success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert--error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert--warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.alert--info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Alert Variant 1: Bordered */
+.alert--bordered {
+    border-width: 2px;
+}
+
+/* Alert Variant 2: Rounded */
+.alert--rounded {
+    border-radius: var(--border-radius-lg);
+}
+
+/* Alert Variant 3: With Icon */
+.alert--icon {
+    display: flex;
+    align-items: flex-start;
+}
+
+.alert--icon .alert__content {
+    flex: 1;
+}
+
+/* Alert Variant 4: Dismissible */
+.alert--dismissible {
+    padding-right: 4rem;
+}
+
+/* Alert Variant 5: Minimal */
+.alert--minimal {
+    background: none;
+    border-left-width: 4px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    padding-left: var(--spacing-lg);
+}
+
+.alert--minimal.alert--success {
+    border-left-color: #155724;
+}
+
+.alert--minimal.alert--error {
+    border-left-color: #721c24;
+}
+
+.alert--minimal.alert--warning {
+    border-left-color: #856404;
+}
+
+.alert--minimal.alert--info {
+    border-left-color: #0c5460;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .alert {
+        padding: var(--spacing-sm);
+    }
+    
+    .alert--dismissible {
+        padding-right: 3rem;
+    }
+    
+    .alert__close {
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión</title>
+    <link rel="stylesheet" href="../assets/css/registro.css">
+     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header class="header ">
+        <a href="../index.html"> <img class="header__evalix neon-info-hi" src="../assets/imagenes/evalix.png" alt="Logo de evalix"></a>
+        <h1 style="color: #000000 ">Bienvenido a Evalix</h1>
+        <!-- logo de Evalix a la izquierda -->
+        <div class="header__sesion">
+            <!-- Icono de cerrar sesión -->
+            <img class="logosesion" src="../assets/imagenes/cerrar-sesion.png" alt="Logo de cerrar sesión">
+            <a href="../index.html" class="textsesion">Cerrar sesión</a>
+        </div>
+    </header>
+<main>
+    
+
+    <div class="container ">    
+        <h2>Inicio de Sesión</h2>
+        <form action="pagina_cliente.html" method="post">            
+            <label for="tipoCliente">Tipo de Cliente:</label>
+            <select id="tipoCliente" name="tipoCliente" required>
+                <option value="">Selecciona una opción</option>
+                <option value="institucion">Institución Educativa</option>
+                <option value="profesor">Profesor</option>
+                <option value="alumno">Alumno</option> 
+            </select>
+
+
+            <label for="emailLogin">Correo Electrónico:</label>
+            <input type="email" id="emailLogin" name="emailLogin" required>
+
+            <label for="passwordLogin">Contraseña:</label>
+            <input type="password" id="passwordLogin" name="passwordLogin" required>
+
+            <a href="./configuracion.html" class="button">Iniciar Sesión</a>
+            <div class="informacion-loguin">
+           <p class="informacion_p">¿Olvidaste tu contraseña? <a href="#">Recuperar</a></p>
+           <p class="informacion_p">¿No tienes cuenta? <a href="./configuracion.html">Registrarse</a></p>
+           </div>
+             </form>
+</div>
+      
+</main>
+    <footer class="footer  neon-info-hi">
+        <h4>© 2025 Evalix. Todos los derechos reservados.</h4>
+        <h4>Políticas de privacidad</h4>
+        <h4>Términos y condiciones</h4>
+    </footer>
+</body>
+</html> 
+    
+
+
+    

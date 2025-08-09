@@ -1,0 +1,100 @@
+/* ===== BREADCRUMBS COMPONENT ===== */
+
+/* Base Breadcrumbs Styles */
+.breadcrumbs {
+    margin: var(--spacing-md) 0;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs__item {
+    display: flex;
+    align-items: center;
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+    content: '/';
+    margin: 0 var(--spacing-sm);
+    color: var(--text-light);
+}
+
+.breadcrumbs__link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.breadcrumbs__link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+.breadcrumbs__item--active {
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+/* Breadcrumbs Variant 2: Background */
+.breadcrumbs--background {
+    background-color: var(--color-light);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+}
+
+/* Breadcrumbs Variant 3: Icons */
+.breadcrumbs--icons .breadcrumbs__item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs--icons .breadcrumbs__link,
+.breadcrumbs--icons .breadcrumbs__item--active {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* Breadcrumbs Variant 4: Arrow Separator */
+.breadcrumbs--arrow .breadcrumbs__item:not(:last-child)::after {
+    content: '→';
+    margin: 0 var(--spacing-sm);
+    color: var(--text-light);
+}
+
+/* Breadcrumbs Variant 5: Minimal */
+.breadcrumbs--minimal {
+    font-size: var(--font-size-xs);
+}
+
+.breadcrumbs--minimal .breadcrumbs__item:not(:last-child)::after {
+    content: '•';
+    margin: 0 var(--spacing-xs);
+    color: var(--text-light);
+}
+
+.breadcrumbs--minimal .breadcrumbs__link {
+    color: var(--text-medium);
+}
+
+.breadcrumbs--minimal .breadcrumbs__link:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .breadcrumbs__list {
+        gap: var(--spacing-xs);
+    }
+    
+    .breadcrumbs__item {
+        font-size: var(--font-size-xs);
+    }
+}

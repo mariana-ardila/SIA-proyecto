@@ -1,0 +1,151 @@
+/* ===== PROGRESS BARS COMPONENT ===== */
+
+/* Base Progress Bar Styles */
+.progress {
+    margin-bottom: var(--spacing-md);
+}
+
+.progress__label {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-medium);
+}
+
+.progress__bar {
+    height: 1rem;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.progress__fill {
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: width var(--transition-normal);
+}
+
+/* Progress Bar Variant 2: Colors */
+.progress__fill--primary {
+    background-color: var(--color-primary);
+}
+
+.progress__fill--secondary {
+    background-color: var(--color-secondary);
+}
+
+.progress__fill--accent {
+    background-color: var(--color-accent);
+}
+
+.progress__fill--dark {
+    background-color: var(--color-dark);
+}
+
+/* Progress Bar Variant 3: Percentage */
+.progress--percentage .progress__fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+}
+
+/* Progress Bar Variant 4: Rounded */
+.progress--rounded .progress__bar {
+    border-radius: 50px;
+}
+
+.progress--rounded .progress__fill {
+    border-radius: 50px;
+}
+
+/* Progress Bar Variant 5: Steps */
+.progress--steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.progress--steps::before {
+    content: '';
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-light-dark);
+    z-index: 1;
+}
+
+.progress__step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+    padding-top: 2rem;
+}
+
+.progress__step::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--text-white);
+    border: 2px solid var(--color-light-dark);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress__step--active {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.progress__step--active::before {
+    border-color: var(--color-primary);
+    background-color: var(--text-white);
+}
+
+.progress__step--completed {
+    color: var(--color-secondary);
+}
+
+.progress__step--completed::before {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .progress--steps {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+    
+    .progress--steps::before {
+        top: 0;
+        left: 0.75rem;
+        width: 2px;
+        height: 100%;
+    }
+    
+    .progress__step {
+        padding-top: 0;
+        padding-left: 2.5rem;
+    }
+    
+    .progress__step::before {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Evalix (Simple)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../assets/css/contacto.css">
+    <link rel="shortcut icon" href="../assets/imagenes/evalix.png" type="image/x-icon">
+   
+   <style>
+       :root {
+  /* === Rojos y Rosas === */
+  --col-rac: #e74c3c;    /* rojo acento */
+  --col-rqm: #B82B00;    /* rojo quemado */
+  --col-rpu: #FF0000;    /* rojo puro */
+  --col-rcm: #DC143C;    /* rojo carmesí */
+  --col-ros: #FFC0CB;    /* rosa */
+  --col-rfu: #FF69B4;    /* rosa fucsia */
+  --col-salm: #FF7F50;    /* salmón */
+  --col-ros2: #FF1493;   /* rosa intenso (deep pink) */
+
+  /* === Naranjas === */
+  --col-nos: #B86000;    /* naranja oscuro */
+  --col-nlo: #F7B733;    /* naranja logo */
+  --col-njo: #FFA500;    /* anaranjado (naranja puro) */
+
+  /* === Amarillos y Dorados === */
+  --col-dor: #B88900;    /* dorado (amarillo oscuro) */
+  --col-amo: #B8AE00;    /* amarillo mostaza (o amarillo oliva) */
+  --col-amp: #FFFF00;    /* amarillo puro */
+  --col-drb: #FFD700;    /* dorado brillante (gold) */
+
+  /* === Verdes (incluyendo Teales y Olivas) === */
+  --col-vse: #2ecc71;    /* verde secundario (o verde medio) */
+  --col-vbr: #00B81F;    /* verde brillante (o verde intenso) */
+  --col-tos: #216351;    /* teal oscuro (verde azulado oscuro) */
+  --col-vmo: #1C3831;    /* verde muy oscuro */
+  --col-tme: #1E7860;    /* teal medio (verde azulado medio) */
+  --col-vmn: #00B785;    /* verde menta (o turquesa claro verdoso) */
+  --col-vos: #008000;    /* verde oscuro (verde clásico) */
+  --col-vli: #90EE90;    /* verde lima (verde claro) */
+  --col-vol: #556B2F;    /* verde oliva */
+  --col-ace: #239bb9;    /* azul celeste (o azul claro) */
+  /* === Azules (incluyendo Cianes y Turquesas) === */
+  --col-apr: #3498db;    /* azul principal */
+  --col-aos: #2c3e50;    /* azul oscuro (o azul profundo) */
+  --col-tql: #4ECDC4;    /* turquesa logo */
+  --col-apu: #0000FF;    /* azul puro */
+  --col-acl: #ADD8E6;    /* azul claro */
+  --col-amr: #00008B;    /* azul marino */
+  --col-cia: #00FFFF;    /* cian */
+  --col-ace: #239bb9;    /* azul celeste (o azul claro) */
+  /* === Púrpuras, Violetas, Magentas e Índigos === */
+  --col-mag: #A300B8;    /* magenta */
+  --col-pin: #3F00B8;    /* púrpura intenso (o índigo fuerte) */
+  --col-lav: #6360E5;    /* lavanda (o azul púrpura) */
+  --col-mlo: #6C63FF;    /* morado logo */
+  --col-mpu: #FF00FF;    /* magenta puro (fucsia brillante) */
+  --col-vio: #EE82EE;    /* violeta */
+  --col-ind: #4B0082;    /* índigo clásico */
+
+  /* === Marrones y Beiges === */
+  --col-mrj: #633021;    /* marrón rojizo */
+  --col-mmo: #38311C;    /* marrón muy oscuro (casi negro oliva) */
+  --col-mcf: #A52A2A;    /* marrón café (o marrón estándar) */
+  --col-bei: #F5F5DC;    /* beige */
+
+  /* === Neutros (Grises, Blanco, Negro) === */
+  --col-gcl: #ecf0f1;    /* gris claro (casi blanco) */
+  --col-ngr: #000000;    /* negro */
+  --col-bla: #FFFFFF;    /* blanco */
+  --col-gme: #808080;    /* gris medio */
+  --col-gos: #A9A9A9;    /* gris oscuro (dim gray) */
+  --col-gsu: #D3D3D3;    /* gris suave (light gray) */
+  --col-pla: #C0C0C0;    /* plata */
+
+  /* === Colores de UI/Propósito Específico === */
+  /* Estos podrían ser neutros oscuros/claros, pero se definen por su uso */
+  --col-fon: #1E202E;    /* fondo oscuro (para UI) */
+  --col-txt: #F1F2F6;    /* texto claro (para UI sobre fondos oscuros) */
+  --font-page: orbitron;
+}
+html{
+  font-size: 100.5%; 
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-page);
+}
+
+.body{
+  background-image: url(../assets/imagenes/udelfut2.png);  
+  background-repeat: no-repeat;
+  background-size: 250% ;
+  background-attachment: fixed;
+  background-position: center;    
+  height: 150vh;
+  /* background-color: #18688a33; */
+  
+}
+.nav {
+  background: rgba(255, 255, 255, 0.568);
+  width: 100%;
+  height: 15%;
+  list-style: none;
+  margin: 0.05em auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.005);
+  gap : 0.5rem;
+  flex-wrap: wrap;       
+  color: white;
+  padding: 0,9rem 4%;
+  backdrop-filter: blur(7px);
+  position: relative;
+  max-width: 2000px;
+  max-height: max-content;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1;
+  
+}  
+.nav__div{
+  height: 11rem;
+  width: 70%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 0.1rem;
+  gap: 0.1rem;
+  flex-wrap: wrap;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: orbitron, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.nav__a {
+  height: 3rem;  
+  backdrop-filter: blur(50px);
+  color: #f3ecec;
+  text-decoration: none;
+  padding: 15px 15px;
+  border: 0.25em solid transparent; 
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 1.5s ease, border-color 0.9s ease, color 0.8s ease;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+}
+#logo{
+  width: 110px;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;   
+  position: relative;
+  left: 1px;
+  margin: 0%;
+  padding: 0;  
+  left: 0.5px;
+}
+
+img {
+  width: 130px;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;   
+  position: relative;    
+  margin: 0%;
+  padding: 0;  
+  left: 0.5px;
+  z-index: 5;
+}
+.section__h1_insti {text-align: center;
+  color:  var(--col-cia);
+  font-size: 1.3rem;
+  height: 225px;
+  padding-top: 10%;
+  /* border: 2px solid #1E202E; */
+}
+  
+.header__h1_insti{
+    -webkit-text-stroke: 1px #a8a9b5;
+
+}
+
+  .neon-info-hi {
+      background: rgba(255, 255, 255, 0.534);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgb(19, 207, 192);
+      padding: 3px 10px;
+      border-radius: 10px;
+      display: flex;
+      position: relative;
+      overflow-wrap: break-word;
+      box-shadow: 0 0 30px rgba(78, 205, 197, 0.01);
+      transition: all 0.9s ease;
+  }
+  
+  .neon-info-hi:hover {
+      box-shadow: 0 0 30px, 0 0 50px rgba(88, 236, 226, 0.95);
+      transform: translateY(-11px);
+  }
+  
+  .neon-info-hi::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(9px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+  }
+  
+  .neon-info-hi:hover::before {
+      opacity: 0.9;
+  }
+  
+  @keyframes glowing {
+      0% { background-position: 0 0; }
+      10% { background-position: 100% 0; }
+      20% { background-position: 200% 0; }
+      30% { background-position: 300% 0; }
+      50% { background-position: 1030% 0; }
+      70% { background-position: 300% 0; }
+      80% { background-position: 200% 0; }
+      90% { background-position: 100% 0; }
+      100% { background-position: 0 0; }
+  }  
+
+  .container-main{
+    display: flex;
+    flex-direction: column;
+ }
+
+
+        /* Contenedor principal */
+        .main-content {
+        display: flex;
+        justify-content: center; /* Centrado horizontal */
+        align-items: center;     /* Centrado vertical */
+        height: 100vh;  
+        }
+
+        /* Estilos para el contenedor del formulario de contacto */
+        .contact-card {
+            background-color: #ffffff9a;
+            padding:1rem 4rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-width: 600px; /* Ancho máximo para el formulario */
+            
+        }
+
+        .contact-card h2 {
+            text-align: center;
+            color: rgb(19, 207, 192); /* Un azul primario */
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* Estilos para los grupos del formulario */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #555;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db; /* Azul primario al enfocar */
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical; /* Permite al usuario redimensionar verticalmente */
+        }
+
+        /* Estilos para el botón de envío */
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.9rem 1.5rem;
+            background-color:#00b785; 
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-button:hover,
+        .submit-button:focus {
+            background-color: #044138; /* Un azul un poco más oscuro */
+            transform: translateY(-2px);
+        }
+
+        /* Estilos del pie de página simple */
+        .simple-footer {
+  background-color: #00b785;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ width: 99%;
+  height: 10rem;
+  border-radius: 10px;
+       }
+
+        /* Para hacer el formulario un poco más responsivo en pantallas pequeñas */
+        @media (max-width: 480px) {
+            .contact-card {
+                padding: 1.5rem;
+            }
+            .simple-header h1 {
+                font-size: 1.6rem;
+            }
+            .contact-card h2 {
+                font-size: 1.5rem;
+            }
+            .submit-button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="body">
+     <header>
+    <nav class= "nav neon-info-hi">
+      <a href="/" id="logo">            
+        <img src="../assets/imagenes/evalix.png" alt="gestion Evalix" width="70px" height="auto" class="neon-info-hi">
+      </a>
+
+      <div class= " nav__div ">        
+           
+       <a class=" nav__a neon-info-hi"  href="./instituciones2.html">Instituciones</a>               
+        <a class=" nav__a neon-info-hi"  href="./docentes.html">Profesores</a>               
+        <a class=" nav__a  neon-info-hi"  href="./estudiante.html">Alumnos</a>                
+        <a class=" nav__a neon-info-hi"  href="./servicios.html">Nosotros</a>       
+        <a class=" nav__a neon-info-hi"  href="./registro.html">Login</a> 
+      </div>      
+    </nav>
+    </header>
+<div class="container-main">
+    <main class="main-content">
+        <div class="contact-card">
+            <h2>Envíanos un Mensaje</h2>
+            <form id="simpleContactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tu Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensaje</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer class="simple-footer">
+        <p>&copy; 2025 Evalix. Todos los derechos reservados.</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* ===== FOOTER COMPONENT ===== */
+
+/* Base Footer Styles */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--text-white);
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+.footer__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+}
+
+.footer__info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer__logo {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-white);
+}
+
+.footer__text {
+    color: var(--color-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.footer__links,
+.footer__contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer__heading {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-white);
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__nav li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer__nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer__nav a:hover {
+    color: var(--text-white);
+}
+
+.footer__contact address {
+    font-style: normal;
+    color: var(--color-light);
+    line-height: 1.6;
+}
+
+.footer__contact p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer__bottom {
+    max-width: var(--container-max-width);
+    margin: var(--spacing-lg) auto 0;
+    padding: var(--spacing-md) var(--container-padding) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: var(--color-light);
+    font-size: var(--font-size-sm);
+}
+
+/* Footer Variant 1: Light Theme */
+.footer--light {
+    background-color: var(--text-white);
+    color: var(--text-dark);
+    border-top: 1px solid var(--color-light-dark);
+}
+
+.footer--light .footer__logo,
+.footer--light .footer__heading {
+    color: var(--text-dark);
+}
+
+.footer--light .footer__text,
+.footer--light .footer__nav a,
+.footer--light .footer__contact address,
+.footer--light .footer__bottom {
+    color: var(--text-medium);
+}
+
+.footer--light .footer__nav a:hover {
+    color: var(--color-primary);
+}
+
+.footer--light .footer__bottom {
+    border-top: 1px solid var(--color-light-dark);
+}
+
+/* Footer Variant 2: Centered */
+.footer--centered .footer__container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.footer--centered .footer__info,
+.footer--centered .footer__links,
+.footer--centered .footer__contact {
+    max-width: 500px;
+    width: 100%;
+}
+
+.footer--centered .footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.footer--centered .footer__nav li {
+    margin-bottom: 0;
+}
+
+/* Footer Variant 3: Minimal */
+.footer--minimal {
+    padding: var(--spacing-lg) 0;
+}
+
+.footer--minimal .footer__container {
+    justify-content: center;
+    text-align: center;
+}
+
+.footer--minimal .footer__info {
+    flex: 0 0 100%;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer--minimal .footer__links,
+.footer--minimal .footer__contact {
+    display: none;
+}
+
+.footer--minimal .footer__bottom {
+    margin-top: var(--spacing-md);
+    border-top: none;
+}
+
+/* Footer Variant 4: Colored */
+.footer--colored {
+    background-color: var(--color-primary);
+}
+
+.footer--colored .footer__nav a:hover {
+    color: var(--color-dark);
+}
+
+/* Footer Variant 5: Grid Layout */
+.footer--grid .footer__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.footer--grid .footer__info,
+.footer--grid .footer__links,
+.footer--grid .footer__contact {
+    min-width: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer__info,
+    .footer__links,
+    .footer__contact {
+        width: 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .footer__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer--grid .footer__container {
+        grid-template-columns: 1fr;
+    }
+}
