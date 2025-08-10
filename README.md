@@ -5,7 +5,6 @@ Elaborado por:
 * Didier
 * Mariana Ardila Liscano
 
-Fecha: 13/03/2025
 Institución: Cesde
 
 ## Contenido
