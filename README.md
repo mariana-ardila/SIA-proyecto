@@ -1,10 +1,8 @@
 # Sistema de Gestión de Notas
 
 Elaborado por:
-* Yesenia Tejada
-* Felipe Quintero Pulgarín
-* Ángel Andrés Lozano Gómez
-* Sergio Andrés Montoya Monsalve
+* Hanna García
+* Didier
 * Mariana Ardila Liscano
 
 Fecha: 13/03/2025
