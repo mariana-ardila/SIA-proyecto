@@ -1,7 +1,7 @@
 function mostrarMenu() {
   console.clear();
   let opcion = prompt(
-    "Bienvenido a evalix\n" +
+    "Bienvenido a sia\n" +
     "Seleccione una opción:\n" +
     "1. Registro de usuario\n" +
     "2. Inicio de sesión\n" +
