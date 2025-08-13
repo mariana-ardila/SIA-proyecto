@@ -54,4 +54,9 @@ function recuperarContrasena() {
   }
   mostrarMenu();
 }
+function cerrarSesion() {
+  console.clear();
+  alert("Sesión cerrada.");
+  mostrarMenu();
+}
 window.onload = mostrarMenu;
