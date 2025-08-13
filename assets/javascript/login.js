@@ -54,3 +54,4 @@ function recuperarContrasena() {
   }
   mostrarMenu();
 }
+window.onload = mostrarMenu;
