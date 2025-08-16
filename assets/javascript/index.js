@@ -2,14 +2,14 @@ function paginaDashboard() {
   console.clear();
   let opcion = prompt(
     "bienvenido al sistema integral academico\n" +
-    "optimiza la gestion de calificaciones\n" +
-    "automatizacion total\n" +
-    "panel intuitivo\n" +
-    "seguridad de datos\n\n" +
-    "listo para transformar la institucion?\n" +
-    "1. agendar demo\n"+
-    "2. salir\n"+
-    "\ningrese su opcion:"
+    "-Optimiza la gestion de calificaciones\n" +
+    "-Automatizacion total\n" +
+    "-Panel intuitivo\n" +
+    "Seguridad de datos\n\n" +
+    "¿Listo para transformar la institución?\n" +
+    "1. Agendar demo\n"+
+    "2. Salir\n"+
+    "\ningrese su opción:"
   );
     if (opcion === "1") {
         alert("Demo agendada exitosamente. Nos pondremos en contacto pronto.");
