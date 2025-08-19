@@ -31,7 +31,8 @@ function menuEstudiante(){
         "1. Escoger semestre y materia\n" +
         "2. Ver notas\n" +
         "3. Boletín semestre y materia\n" +
-        "4. Cerrar sesión\n" +
+        "4. Actualizar foto de perfil\n" +
+        "5. Cerrar sesión\n" +
         "Seleccione una opción:"
     );
 
@@ -41,7 +42,9 @@ function menuEstudiante(){
         verNotas();
     } else if(opcion == "3"){
         verBoletin();
-    }else if (opcion == "4"){
+    }else if(opcion == "4"){
+        actualizarFoto();
+    }else if (opcion == "5"){
         mostrarMenu();
     }else {
         alert("Opción no válida.");
@@ -105,6 +108,11 @@ function menuEstudiante(){
             "\nMateria: " + materiaSeleccionada +
             "\nPromedio: " + promedio.toFixed(2)
         );
+        menuEstudiante();
+    }
+
+    function actualizarFoto(){
+        alert("Foto actualizada exitosamente");
         menuEstudiante();
     }
 
