@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <!-- <script src="../assets/javascript/login.js"></script> -->
+     <script src="../assets/javascript/login.js"></script> 
     <header class="header ">
         <a href="../index.html"> <img class="header__evalix neon-info-hi" src="../assets/imagenes/evalix.png" alt="Logo de evalix"></a>
         <h1 style="color: #000000 ">Bienvenido a sia</h1>
@@ -29,16 +29,9 @@
     <div class="container ">    
         <h2>Inicio de Sesión</h2>
         <form action="pagina_cliente.html" method="post">            
-            <label for="tipoCliente">Tipo de Cliente:</label>
-            <select id="tipoCliente" name="tipoCliente" required>
-                <option value="">Selecciona una opción</option>
-                <option value="institucion"></option>
-                <option value="profesor">Profesor</option>
-                <option value="alumno">Alumno</option> 
-            </select>
+           
 
-
-            <label for="emailLogin">Correo Electrónico:</label>
+            <label for="emailLogin">Usuario Estudiante:</label>
             <input type="email" id="emailLogin" name="emailLogin" required>
 
             <label for="passwordLogin">Contraseña:</label>
@@ -47,7 +40,6 @@
             <a href="./estudiante.html" class="button">Iniciar Sesión</a>
             <div class="informacion-loguin">
            <p class="informacion_p">¿Olvidaste tu contraseña? <a href="#">Recuperar</a></p>
-           <p class="informacion_p">¿No tienes cuenta? <a href="./configuracion.html">Registrarse</a></p>
            </div>
              </form>
 </div>
