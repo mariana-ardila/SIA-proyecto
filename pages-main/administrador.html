@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Perfil Administrador</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+        <!-- Estilos globales -->
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/administrador.css" />
+    </head>
+    <body>
+        <header class="header">
+            <a href="../index.html">
+                <img class="header__evalix" src="../assets/imagenes/evalix.png" alt="Logo de evalix" />
+            </a>
+            <h1 style="color: #00b785">Panel Administrador</h1>
+            <div class="header__sesion">
+                <img class="logosesion" src="../assets/imagenes/cerrar-sesion.png" alt="Cerrar sesión" />
+                <a href="../index.html"><span class="textsesion">Cerrar sesión</span></a>
+            </div>
+        </header>
+        <div class="container-main">
+            <main class="main">
+                <section class="main__principal">
+                    <div class="profile-header">
+                        <div class="avatar">A</div>
+                        <div class="profile-info">
+                            <h2>Administrador</h2>
+                            <p>admin@sistema.com</p>
+                            <p>Rol: Administrador General</p>
+                        </div>
+                    </div>
+                    <div class="functions">
+                        <h3 style="color:#00b785; text-align:center;">Funciones del Administrador</h3>
+                        <div class="functions-list">
+                            <div class="function-card">
+                                <h4>Gestión de Usuarios</h4>
+                                <p>Crear, editar o eliminar cuentas de profesores y estudiantes.</p>
+                            </div>
+                            <div class="function-card">
+                                <h4>Gestión de Asignaturas</h4>
+                                <p>Agregar, modificar o eliminar asignaturas del sistema.</p>
+                            </div>
+                            <div class="function-card">
+                                <h4>Gestión de Notas</h4>
+                                <p>Visualizar y modificar las notas de los estudiantes.</p>
+                            </div>
+                            <div class="function-card">
+                                <h4>Reportes</h4>
+                                <p>Generar reportes de rendimiento académico y estadísticas.</p>
+                            </div>
+                            <div class="function-card">
+                                <h4>Configuración del Sistema</h4>
+                                <p>Actualizar parámetros generales y políticas del sistema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="logout-btn" onclick="window.location.href='../index.html'">Cerrar Sesión</button>
+                </section>
+            </main>
+            <footer>
+                <section class="cta">
+                    <p>
+                        &copy; 2025 Evalix. Todos los derechos reservados. | Políticas de privacidad | Términos y condiciones
+                    </p>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

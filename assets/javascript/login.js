@@ -34,7 +34,6 @@ function registro() {
 
 function login() {
   console.clear();
-  let tipoCliente = prompt("Ingrese su tipo de cliente ( profesor, alumno):");
   let email = prompt("Ingrese su correo electrónico:");
   let password = prompt("Ingrese su contraseña:");
   if (email && password) {
