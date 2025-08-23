@@ -13,104 +13,8 @@ function opcionesDocentes (){
         return opcion;
     }
 
-let opcion=opcionesDocentes ();
-
-switch(opcion){
-    case 1:
-        selectGrupo()
-         ingresarNotas()
-         opcionesDocentes ()
-    break;
-    case 2:
-        selectGrupo()
-        ponerAsistencia()
-        opcionesDocentes ()
-    break;
-    case 3:
-        selectGrupo()
-        reportes();
-        opcionesDocentes ()
-    break;
-    case 4:
-        verCalendario();
-        opcionesDocentes ()
-    break;
-    case 5:
-        actualizarDatos();
-        opcionesDocentes ()
-    break;
-    case 6:
-        cerrarSesionDocentes();
-    break;
-    default:
-        opcionesDocentes();
-}
-
-function selectGrupo(){
-            let asignatura =Number(prompt(`Digite el número de la asignatura correspondiente:\n
-            1. Matemática financiera
-            2. Matemáticas general
-            3. Estadística general
-            4. Estadística descriptiva
-            5. Estadística inferencial 
-            6. Geometría Vectorial
-            7. Geometría inferencial
-            `))
-
-            let grupo =Number(prompt(`Digite el número del grupo correspondiente:\n
-            1. Grupo 1
-            2. Grupo 2
-            3. Grupo 3
-            4. Grupo 4
-            `))
-            
-            let periodoAcademico =Number(prompt(`Digite el número del periodo académico: \n
-            1. Grupo 1
-            2. Grupo 2
-            3. Grupo 3
-            4. Grupo 4
-            `))
-
-}
-
-
-function ingresarNotas(){
-
-    let notas =[];
-            let cantidadNotas=Number(prompt("Ingrese la cantidad de notas a registrar: "))
-            for (let i=0; i<cantidadNotas; i++){
-                notas[i]=parseFloat(prompt(`Ingrese el valor de la nota: ${i + 1}`))
-            }  
-            alert(`Las notas de los estudiantes son: \n
-                ${notas.join(", ")}`);
-
-            alert(`¡Notas ingresadas correctamente!`)
-
-}
-
-function ponerAsistencia(){
-        let name=prompt("Ingrese el nombre del estudiante: ");
-        let estudiantesAsistio=Number(prompt(`¿${name} + asisitió a clases?\n
-            1.Sí
-            2.No`));
-
-
-        if(isNaN(estudiantesAsistio)){
-              while(estudiantesAsistio !=1 && estudiantesAsistio !=2){
-                estudiantesAsistio=Number(prompt(`Ingrese un valor válido, ¿${name} + asisitió a clases?\n
-            1.Sí
-            2.No`));}
-            }
-
-         if (estudiantesAsistio==1){
-                alert("Asistencia aprobada")}
-        else{
-            alert(`${name} no asistió a clases`)}
-    
-    }
-
 let reportes=()=>{
-let reporte= Number(prompt(`¿desea sacar el reporte de las notas del grupo?\n
+let reporte= Number(prompt(`¿Desea sacar el reporte de las notas del grupo?\n
             1.Sí
             2.No`));
 
@@ -143,6 +47,112 @@ let calendario= Number(prompt(`¿Desea ver el calendario académico?\n
 }
 
 
+let opcion=opcionesDocentes ();
+while(opcion>0 || opcion<7){
+    
+switch(opcion){
+    case 1:
+        selectGrupo();
+         ingresarNotas()
+    break;
+    case 2:
+        selectGrupo();
+        ponerAsistencia()
+    break;
+    case 3:
+        selectGrupo();
+        reportes();
+    break;
+    case 4:
+        verCalendario();
+    break;
+    case 5:
+        actualizarDatos();
+    break;
+    case 6:
+        cerrarSesionDocentes();
+    break;
+    default:
+
+}
+
+       opcion=opcionesDocentes ();
+}
+
+
+
+function selectGrupo(){
+            let asignatura =Number(prompt(`Digite el número de la asignatura correspondiente:\n
+            1. Matemática financiera
+            2. Matemáticas general
+            3. Estadística general
+            4. Estadística descriptiva
+            5. Estadística inferencial 
+            6. Geometría Vectorial
+            7. Geometría inferencial
+            `))
+
+            let grupo =Number(prompt(`Digite el número del grupo correspondiente:\n
+            1. Grupo 1
+            2. Grupo 2
+            3. Grupo 3
+            4. Grupo 4
+            `))
+            
+            let periodoAcademico =Number(prompt(`Digite el número del periodo académico: \n
+            1. Grupo 1
+            2. Grupo 2
+            3. Grupo 3
+            4. Grupo 4
+            `))
+
+}
+
+
+function ingresarNotas(){
+
+    let nombreEstudiante=prompt("Digite el nombre del estudiante: ")
+    let tipoNota=Number(prompt(`Ingrese la clasificación de la nota: \n
+        1.
+        2.
+        3.` ))
+
+    let notas =[];
+            let cantidadNotas=Number(prompt("Ingrese la cantidad de notas a registrar: "))
+            for (let i=0; i<cantidadNotas; i++){
+                notas[i]=parseFloat(prompt(`Ingrese el valor de la nota: ${i + 1}`))
+            }  
+            alert(`Las notas de los estudiantes son: \n
+                ${notas.join(", ")}`);
+
+            alert(`¡Notas ingresadas correctamente!`)
+
+}
+
+function ponerAsistencia(){
+        let name=prompt("Ingrese el nombre del estudiante: ");
+        let estudiantesAsistio=Number(prompt(`¿${name} asisitió a clases?\n
+            1.Sí
+            2.No`));
+
+
+        if(isNaN(estudiantesAsistio)){
+              while(estudiantesAsistio !=1 && estudiantesAsistio !=2){
+                estudiantesAsistio=Number(prompt(`Ingrese un valor válido, ¿${name} asisitió a clases?\n
+            1.Sí
+            2.No`));}
+            }
+
+         if (estudiantesAsistio==1){
+                alert("Asistencia aprobada")}
+        else{
+            alert(`${name} no asistió a clases`)}
+    
+    }
+
+
+
+
 function actualizarDatos(){
 let datoActualizar=Number(prompt(`¿Qué dato desea actualizar?
     1.Nombre
@@ -159,13 +169,20 @@ let datoActualizar=Number(prompt(`¿Qué dato desea actualizar?
 
     if (datoActualizar==1){
         let nombreProfesor=prompt("Ingrese su nombre: ")
-    }else if(datoActualizar==2){
+    }
+    else if(datoActualizar==2){
         let apellidosProfesor= prompt("Ingrese sus apellidos: ")
-    }else if(datoActualizar==3){
+    }
+    else if(datoActualizar==3){
         let tipoDocumProfesor= prompt("Ingrese su tipo de documento: ")
-    } else if(datoActualizar==4){
-        let correoProfesor=prompt("Ingrese su correo electrónico: ")
-    }else if(datoActualizar==5){
+    }
+    else if(datoActualizar==4){
+        let documtProfesor=prompt("Ingrese su documento de identificación: ")
+    }
+    else if(datoActualizar==5){
+        let emailProfesor=prompt("Ingrese su correo electrónico: ")
+    }
+     else if(datoActualizar==6){
         let telefonoProfesor=prompt("Ingrese su teléfono: ")
     }
 
