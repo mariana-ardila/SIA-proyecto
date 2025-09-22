@@ -4,5 +4,6 @@ export let expresiones = {
     nombre : /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     telefono : /^\d{7,14}$/, // Solo números, entre 7 y 14 dígitos
     direccion : /^[a-zA-Z0-9\s\#\-\.\,]{5,100}$/, // Letras, números, espacios y algunos caracteres especiales
-    documento : /^\d{7,14}$/ // Solo números, entre 7 y 14 dígitos
+    documento : /^\d{7,14}$/,// Solo números, entre 7 y 14 dígitos
+    texto : /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{5,50}$/
 }
