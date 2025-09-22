@@ -132,6 +132,17 @@ body {
     background: #009e6d;
     box-shadow: 0 0 20px #00b785, 0 0 50px #00b78544;
 }
+
+.input-error{
+    background-color: red;
+    color: #000000;
+}
+
+.input-correcto{
+    background-color: green;
+    color: #000000;
+}
+
 @media (max-width: 900px) {
     .main__principal {
         width: 98vw;
