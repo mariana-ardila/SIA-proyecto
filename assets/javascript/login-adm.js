@@ -25,7 +25,7 @@ function mostrarMenu() {
 
 import { expresiones } from './expresiones.js';
 
-let inputemail = document.getElementsByClassName("input");
+let inputs = document.getElementsByClassName("input");
 let arregloInputs = [...inputs];
 
 arregloInputs.map((input) =>  {
