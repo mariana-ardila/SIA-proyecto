@@ -41,6 +41,17 @@
 .registro-form button:hover {
   background: #009e6d;
 }
+
+.input-error{
+    background-color: red;
+    color: #000000;
+}
+
+.input-correcto{
+    background-color: green;
+    color: #000000;
+}
+
 @media (max-width: 500px) {
   .registro-container {
     margin: 2rem 0.5rem;
