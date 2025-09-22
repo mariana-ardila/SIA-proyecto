@@ -22,3 +22,33 @@ function mostrarMenu() {
     mostrarMenu();
   }
 }
+
+import { expresiones } from './expresiones.js';
+
+let inputemail = document.getElementsByClassName("input");
+let arregloInputs = [...inputs];
+
+arregloInputs.map((input) =>  {
+  input.addEventListener('keyup', (e) => {
+    switch(e.target.name){
+      case "emailLogin":
+        if(expresiones.correo.test(e.target.value)){
+          document.getElementById('emailLogin').classList.remove('input-error');
+          document.getElementById('emailLogin').classList.add('input-correcto');
+        } else {
+          document.getElementById('emailLogin').classList.add('input-error');
+          document.getElementById('emailLogin').classList.remove('input-correcto');
+        }
+      break;
+      case "passwordLogin":
+        if(expresiones.password.test(e.target.value)){
+          document.getElementById('passwordLogin').classList.remove('input-error');
+          document.getElementById('passwordLogin').classList.add('input-correcto');
+        } else {
+          document.getElementById('passwordLogin').classList.add('input-error');
+          document.getElementById('passwordLogin').classList.remove('input-correcto');
+        }
+      break;
+    }
+  });
+});
