@@ -7,6 +7,13 @@ Elaborado por:
 
 Institución: Cesde
 
+Entregables Desarrollo WEB:
+Aplicaciones Móviles: Es este proyecto
+Desarrollo Web:https://github.com/HannaGarcia11/Proyecto_Integrador_SIA.git
+Bases de datos: Adjuntamos el script y el modelo relacional.
+
+
+
 ## Contenido
 
 ---
