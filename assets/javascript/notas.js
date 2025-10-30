@@ -1,43 +1,72 @@
-import { expresiones } from "./expresiones.js";
-
-// Espera que el HTML cargue completamente
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Selecciona todos los inputs dentro de la tabla
-    const inputs = document.querySelectorAll(".container-table__table input[type='number']");
+  const inputs = document.querySelectorAll('input[type="number"]');
+  const button = document.getElementById("button");
 
-    // Recorre todos los inputs
-    inputs.forEach(input => {
-        // Escucha el evento "input" (cuando el usuario escribe o cambia el valor)
-        input.addEventListener("input", (evento) => {
-            const valor = evento.target.value;
-            const id = evento.target.id;
-            console.log(`El input ${id} cambió a: ${valor}`);
-        });
+  // Escuchar cambios en todos los inputs numéricos
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      const valor = parseFloat(input.value);
+
+      // Validación de rango
+      if (!isNaN(valor) && valor >= 0 && valor <= 5) {
+        input.classList.remove("error");
+        input.classList.add("correcto");
+      } else {
+        input.classList.remove("correcto");
+        input.classList.add("error");
+      }
+
+      // Recalcular el promedio solo de la fila del input modificado
+      const fila = input.closest("tr");
+      calcularPromedioFila(fila);
     });
-});
+  });
 
-const mensaje = document.getElementById("mensaje");
-const asignatura = document.getElementById("asignatura");
-const grupo = document.getElementById("group");
-const periodo = document.getElementById("time");
+  // Función que calcula el promedio de una fila específica
+  function calcularPromedioFila(fila) {
+    const notasInputs = fila.querySelectorAll('input[type="number"]:not([readonly])');
+    let suma = 0;
+    let cantidad = 0;
 
-asignatura.addEventListener("change", () => {
-    console.log("Asignatura seleccionada:", asignatura.value);
-    mensaje.innerText="Materia seleccionada: " + asignatura.value ;
-});
+    notasInputs.forEach(input => {
+      const valor = parseFloat(input.value);
+      if (!isNaN(valor) && valor >= 0 && valor <= 5) {
+        suma += valor;
+        cantidad++;
+      }
+    });
 
-grupo.addEventListener("change", () => {
-    console.log("Grupo seleccionado:", grupo.value);
-});
+    const promedioInput = fila.querySelector('input[readonly]');
+    const promedio = cantidad > 0 ? (suma / cantidad).toFixed(2) : "";
+    promedioInput.value = promedio;
+  }
 
-periodo.addEventListener("change", () => {
-    console.log("Periodo seleccionado:", periodo.value);
-});
+  // Cuando se hace clic en el botón, obtener los datos de todos los estudiantes
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
 
+    const filas = document.querySelectorAll("tbody tr");
+    const estudiantes = [];
 
-input.addEventListener("input", (evento) => {
-    const valor = evento.target.value;
-    const id = evento.target.id;
-    localStorage.setItem(id, valor);
+    filas.forEach(fila => {
+      const id = fila.cells[1].textContent.trim();
+      const nombre = fila.cells[2].textContent.trim();
+
+      const notas = {};
+      fila.querySelectorAll('input[type="number"]:not([readonly])').forEach(input => {
+        notas[input.name] = input.value ? parseFloat(input.value) : null;
+      });
+
+      const promedio = fila.querySelector('input[readonly]').value;
+
+      estudiantes.push({
+        id,
+        nombre,
+        notas,
+        promedio: promedio ? parseFloat(promedio) : null
+      });
+    });
+
+    console.log(JSON.stringify(estudiantes, null, 2));
+  });
 });

@@ -1,5 +1,32 @@
 import { expresiones } from "./expresiones.js";
 
+//Subir foto
+
+document.addEventListener("DOMContentLoaded", () => {
+  const inputFoto = document.getElementById("fotoInput");
+  const imagen = document.getElementById("fotoUsuario");
+
+  inputFoto.addEventListener("change", (event) => {
+    const archivo = event.target.files[0];
+    if (archivo) {
+      // Verificar que sea una imagen
+      if (!archivo.type.startsWith("image/")) {
+        alert("Por favor selecciona un archivo de imagen válido.");
+        return;
+      }
+
+      // Crear una URL temporal para mostrar la imagen
+      const lector = new FileReader();
+      lector.onload = function(e) {
+        imagen.src = e.target.result; // Actualiza la imagen mostrada
+      };
+      lector.readAsDataURL(archivo);
+    }
+  });
+});
+
+//Actualizar datos
+
 let formulario=document.getElementById("form");
 let inputs = formulario.querySelectorAll("input");
 
@@ -10,12 +37,12 @@ let inputs = formulario.querySelectorAll("input");
 
 
 formulario.addEventListener("submit", (e) => {
-      e.preventDefault();
+  e.preventDefault();
 
-      const datos = Object.fromEntries(new FormData(formulario));
-      console.log(datos);
-      alert("¡Datos actualizados correctamente!")
-    });
+  const datos = Object.fromEntries(new FormData(formulario));
+  console.log("Los datos actualizados son: " + JSON.stringify(datos, null, 2)); // ← convierte a JSON con formato
+  alert("¡Datos actualizados correctamente!");
+});
 
 
 

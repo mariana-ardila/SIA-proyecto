@@ -38,11 +38,11 @@
                     <p class="information-block__text">Nombre: Steven Wattson Heiker</p>
                     <p class="information-block__text">Cédula: 1000678090</p>
                     <p class="information-block__text">Género: Masculino</p>
-                    <p class="information-block__text">Correo: steven1000@uniedu.co.co</p>
+                    <p class="information-block__text">Correo: <span>steven1000@uniedu.co.co</span></p>
                 </div>
-                <div class="information-block__updata">
-                    <img class="information-block__user-icon" src="../assets/imagenes/usuario.png" alt="Icono de usuario">
-                    <label for="texto" class="information-block__bottom">Actualizar Foto<input id="texto" type="file" style="display:none"></label> 
+               <div class="information-block__updata">
+                    <img class="information-block__user-icon" id="fotoUsuario" src="../assets/imagenes/usuario.png" alt="Icono de usuario">
+                    <label for="fotoInput" class="information-block__bottom"> Actualizar Foto <input id="fotoInput" type="file" accept="image/*" style="display:none"></label> 
                 </div>
             </div>
         </div>
@@ -54,21 +54,21 @@
         
                 <div class="container-principal__text">
                     <label for="email" class="container-principal__label">1. Correo:</label>
-                    <input type="email" id="correo" class="container-principal__input" placeholder="Ingrese su correo electrónico" style="border-radius: 0.6rem;  width: 40rem; height: 2rem;">
+                    <input name="email" type="email" id="correo" class="container-principal__input" placeholder="Ingrese su correo electrónico" style="border-radius: 0.6rem;  width: 40rem; height: 2rem;">
                 </div>
                    <div class="container-principal__text">
                     <label for="email" class="container-principal__label">2. Dirección:</label>
-                    <input type="text" id="direccion" class="container-principal__input" placeholder="Ingrese su correo electrónico" style="border-radius: 0.6rem;  width: 40rem; height: 2rem;">
+                    <input  name="direccion" type="text" id="direccion" class="container-principal__input" placeholder="Ingrese su correo electrónico" style="border-radius: 0.6rem;  width: 40rem; height: 2rem;">
                 </div>
                 <div class="container-principal__text">
                     <label for="cellphone" class="container-principal__label">3. Teléfono:</label>
-                    <input type="number" id="telefono" class="container-principal__input" placeholder="Ingrese su teléfono" style="border-radius: 0.6rem; width: 40rem; height: 2rem;">
+                    <input  name="telefono" type="number" id="telefono" class="container-principal__input" placeholder="Ingrese su teléfono" style="border-radius: 0.6rem; width: 40rem; height: 2rem;">
                 </div>
                 </div>
 
                 <button id="button" class="container-principal__buttom" type="submit">Guardar</button>
-
             </form>
+
         </div>
     </main>
 </div>
