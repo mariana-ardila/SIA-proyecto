@@ -214,11 +214,10 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 5%;
-  border: 2px solid #00b7864e;
 
   border-radius: 0.2rem;
   width: 100%;
-  height: 100%;
+  height: 80%;
   margin-top: 0;
   gap: 3.5rem;
 }
@@ -247,12 +246,12 @@ body {
 }
 
 .container-principal__text {
-  margin: 1rem;
+  margin: 1.5rem;
   padding: 1rem;
-  background-color: #00b78653;
+  background-color: #69c8b053;
   border-radius: 0.6rem;
-  font-size: 1rem;
-  gap: 1rem;
+  font-size: 1.2rem;
+  gap: 1.4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -261,15 +260,15 @@ body {
   font-weight: bold;
 }
 .container-principal__input {
-  border: dotted 4px #00b7864e;
-  padding: 8px;
+  border: dotted 4px #76b4a34e;
+  padding: 10px;
 }
 
 .container-principal__buttom {
   padding: 0.5rem 1.5rem;
   border: 3px solid #00b786a9;
   border-radius: 20px;
-  background-color: aliceblue;
+  background-color: rgb(217, 233, 246);
   font-size: 18px;
   font-weight: bold;
   width: 8rem;
@@ -302,3 +301,15 @@ body {
   font-size: 0.8rem;
   color: white;
 }
+
+input.valido{
+  background-color: #00b785;
+  border: 5px;
+
+}
+input.invalido{
+
+  background-color: #f71d00;
+  border: 5px;
+}
+

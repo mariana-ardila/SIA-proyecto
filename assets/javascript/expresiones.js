@@ -5,5 +5,7 @@ export let expresiones = {
     telefono : /^\d{7,14}$/, // Solo números, entre 7 y 14 dígitos
     direccion : /^[a-zA-Z0-9\s\#\-\.\,]{5,100}$/, // Letras, números, espacios y algunos caracteres especiales
     documento : /^\d{7,14}$/,// Solo números, entre 7 y 14 dígitos
-    texto : /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{5,50}$/
+    texto : /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{5,50}$/,
+    nota: /^(?:[1-4](?:\.[0-9]{1,2})?|5(?:\.0{1,2})?)$/
 }
+

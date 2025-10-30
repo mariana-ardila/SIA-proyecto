@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,510 +41,290 @@
                         <label for="asignatura" class="container-principal__label">Asignatura</label>
                         <select class="container-principal__select" name="asignatura" id="asignatura">
                             <option value="">Seleccione la asignatura</option>
-                            <option value="">Matématicas Financiera</option>
-                            <option value="">Matemáticas General</option>
-                            <option value="">Estadística General</option>
-                            <option value="">Estadística Descriptiva</option>
-                            <option value="">Estadística Inferencial</option>
-                            <option value="">Geometría Vectorial</option>
-                            <option value="">Geometría Líneal</option>
+                            <option value="Matématicas Financiera">Matématicas Financiera</option>
+                            <option value="Matemáticas General">Matemáticas General</option>
+                            <option value="Estadística General">Estadística General</option>
+                            <option value="Estadística Descriptiva">Estadística Descriptiva</option>
+                            <option value="Estadística Inferencial">Estadística Inferencial</option>
+                            <option value="Geometría Vectorial">Geometría Vectorial</option>
+                            <option value="Geometría Líneal">Geometría Líneal</option>
                         </select>
                      </li>
                     <li class="container-principal__item">
                         <label for="group" class="container-principal__label">Grupo</label>
                         <select class="container-principal__select"  name="group" id="group">
                             <option value="">Seleccione el grupo</option>
-                            <option value="">Grupo 1</option>
-                            <option value="">Grupo 2</option>
-                            <option value="">Grupo 3</option>
-                            <option value="">Grupo 4</option>
+                            <option value="Grupo 1">Grupo 1</option>
+                            <option value="Grupo 2">Grupo 2</option>
+                            <option value="Grupo 3">Grupo 3</option>
+                            <option value="Grupo 4">Grupo 4</option>
                         </select>
                      </li>
                     <li class="container-principal__item">
                         <label for="time" class="container-principal__label">Perido Académico</label>
                         <select class="container-principal__select" name="time" id="time">
                             <option value="">Seleccione el perido académico</option>
-                            <option value="">Perido 1</option>
-                            <option value="">Periodo 2</option>
-                            <option value="">Perido 3</option>
+                            <option value="Perido 1">Perido 1</option>
+                            <option value="Perido 2">Periodo 2</option>
+                            <option value="Perido 3">Perido 3</option>
                         </select>
                     </li>
                 </ul>
+
+                            <p style="font-size: 0.85rem; color: rgb(255, 255, 255);" id="mensaje"></p>
+
             </form>
        </div>
        <div class="container-table">
             <table border="2px" class="container-table__table">
                 <thead>
-                <tr>
+                <tr style="background-color: rgb(255, 255, 255);">
                     <th>Id</th>
                     <th>Cédula</th>
                     <th>Nombre</th>
-                    <th colspan="3">Comportamiento</th>
+                    <th colspan="3">Conocimiento</th>
                     <th>30%</th>
                     <th colspan="3">Actitud</th>
                     <th>30%</th>
-                    <th colspan="3">Desempeño</th>
-                    <th>40%</th>
                     <th>Prom</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
         
-                    <td>1</td>
-                    <td>1000897224</td>
-                    <td>Mariana Ardila Liscano</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                                       
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">1</td>
+                    <td style=" text-align: center;">1000897224</td>
+                    <td id="nameStudent" style="background-color: rgb(255, 255, 255); text-align: center;">Mariana Ardila Liscano</td>
+                    <td>
+                        <input id="nota1_est1" name="nota1_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota2_est1" name="nota2_est1" type="number" value="Mariana Ardila Liscano" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota3_est1" name="nota3_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota4_est1" name="nota4_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota5_est1" name="nota5_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota6_est1" name="nota6_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota7_est1" name="nota7_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota8_est1" name="nota8_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
+                        <td><input id="nota9_est1" name="nota9_est1" type="number" value="" min="0" max="5.0" style="width:3rem"></td>
                 </tr>
+                 
                 <tr>
-                    <td>2</td>
-                    <td>1000783456</td>
-                    <td>Santiago Gómez Ruiz</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">2</td>
+                    <td style=" text-align: center;">1000783456</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Santiago Gómez Ruiz</td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""   type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td><input id="nota1_est2" name="nota1_est2" type="number" value=""  type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    
                     
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>1000456123</td>
-                    <td>Esteban Rodríguez Mejía</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">3</td>
+                    <td style=" text-align: center;">1000456123</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Esteban Rodríguez Mejía</td>
+                        <td><input id="nota1_est3" name="nota1_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est3" name="nota2_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est3" name="nota3_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est3" name="nota4_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est3" name="nota5_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est3" name="nota6_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est3" name="nota7_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est3" name="nota8_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est3" name="nota9_est3" type="number" value="" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>4</td>
-                    <td>1000654987</td>
-                    <td>Sofía López Giraldo</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">4</td>
+                    <td style=" text-align: center;">1000654987</td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">Sofía López Giraldo</td>
+                    <td><input id="nota1_est4" name="nota1_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est4" name="nota2_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est4" name="nota3_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est4" name="nota4_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est4" name="nota5_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est4" name="nota6_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est4" name="nota7_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est4" name="nota8_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est4" name="nota9_est4" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+</tr>
                 </tr>
                 <tr>
-                    <td>5</td>
-                    <td>1000897432</td>
-                    <td>Tomás Pérez Zapata</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">5</td>
+                    <td style=" text-align: center;">1000897432</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Tomás Pérez Zapata</td>
+             <td><input id="nota1_est5" name="nota1_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota2_est5" name="nota2_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota3_est5" name="nota3_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota4_est5" name="nota4_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota5_est5" name="nota5_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota6_est5" name="nota6_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota7_est5" name="nota7_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota8_est5" name="nota8_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota9_est5" name="nota9_est5" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>6</td>
-                    <td>1000345678</td>
-                    <td>Isabella Marín Herrera</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">6</td>
+                    <td style=" text-align: center;">1000345678</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Isabella Marín Herrera</td>
+                    <td><input id="nota1_est6" name="nota1_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota2_est6" name="nota2_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota3_est6" name="nota3_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota4_est6" name="nota4_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota5_est6" name="nota5_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota6_est6" name="nota6_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota7_est6" name="nota7_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota8_est6" name="nota8_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota9_est6" name="nota9_est6" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>7</td>
-                    <td>1000678990</td>
-                    <td>Juan Pablo Henao</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">7</td>
+                    <td style=" text-align: center;">1000678990</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Juan Pablo Henao</td>
+                      <td><input id="nota1_est7" name="nota1_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est7" name="nota2_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est7" name="nota3_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est7" name="nota4_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est7" name="nota5_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est7" name="nota6_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est7" name="nota7_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est7" name="nota8_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est7" name="nota9_est7" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>8</td>
-                    <td>1000911223</td>
-                    <td>Valentina Orozco Vélez</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">8</td>
+                    <td style=" text-align: center;">1000911223</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Valentina Orozco Vélez</td>
+                  <td><input id="nota1_est8" name="nota1_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est8" name="nota2_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est8" name="nota3_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est8" name="nota4_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est8" name="nota5_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est8" name="nota6_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est8" name="nota7_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est8" name="nota8_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est8" name="nota9_est8" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>9</td>
-                    <td>1000788112</td>
-                    <td>Samuel Torres Cifuentes</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">9</td>
+                    <td style=" text-align: center;">1000788112</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Samuel Torres Cifuentes</td>
+                    <  <td><input id="nota1_est9" name="nota1_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota2_est9" name="nota2_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota3_est9" name="nota3_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota4_est9" name="nota4_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota5_est9" name="nota5_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota6_est9" name="nota6_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota7_est9" name="nota7_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota8_est9" name="nota8_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota9_est9" name="nota9_est9" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>10</td>
-                    <td>1000111567</td>
-                    <td>Manuela Zapata Hoyos</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">10</td>
+                    <td style=" text-align: center;">1000111567</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Manuela Zapata Hoyos</td>
+                   <td><input id="nota1_est10" name="nota1_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota2_est10" name="nota2_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota3_est10" name="nota3_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota4_est10" name="nota4_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota5_est10" name="nota5_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota6_est10" name="nota6_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota7_est10" name="nota7_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota8_est10" name="nota8_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota9_est10" name="nota9_est10" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>11</td>
-                    <td>1000897432</td>
-                    <td>Tomás Pérez Zapata</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">11</td>
+                    <td style=" text-align: center;">1000897432</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Tomás Pérez Zapata</td>
+                    <td><input id="nota1_est11" name="nota1_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est11" name="nota2_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est11" name="nota3_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est11" name="nota4_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est11" name="nota5_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est11" name="nota6_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est11" name="nota7_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est11" name="nota8_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est11" name="nota9_est11" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>12</td>
-                    <td>1000345678</td>
-                    <td>Isabella Marín Herrera</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">12</td>
+                    <td style=" text-align: center;">1000345678</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;"> Isabella Marín Herrera</td>
+                     <td><input id="nota1_est12" name="nota1_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota2_est12" name="nota2_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota3_est12" name="nota3_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota4_est12" name="nota4_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota5_est12" name="nota5_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota6_est12" name="nota6_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota7_est12" name="nota7_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota8_est12" name="nota8_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota9_est12" name="nota9_est12" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>13</td>
-                    <td>1000678990</td>
-                    <td>Juan Pablo Henao</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">13</td>
+                    <td style=" text-align: center;">1000678990</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Juan Pablo Henao</td>
+                   <td><input id="nota1_est13" name="nota1_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota2_est13" name="nota2_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota3_est13" name="nota3_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota4_est13" name="nota4_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota5_est13" name="nota5_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota6_est13" name="nota6_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota7_est13" name="nota7_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota8_est13" name="nota8_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                    <td><input id="nota9_est13" name="nota9_est13" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>14</td>
-                    <td>1000897432</td>
-                    <td>Tomás Pérez Zapata</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">14</td>
+                    <td style=" text-align: center;">1000897432</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Tomás Pérez Zapata</td>
+                      <td><input id="nota1_est14" name="nota1_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota2_est14" name="nota2_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota3_est14" name="nota3_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota4_est14" name="nota4_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota5_est14" name="nota5_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota6_est14" name="nota6_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota7_est14" name="nota7_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota8_est14" name="nota8_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                            <td><input id="nota9_est14" name="nota9_est14" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>15</td>
-                    <td>1000345678</td>
-                    <td>Isabella Marín Herrera</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">15</td>
+                    <td style=" text-align: center;">1000345678</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Isabella Marín Herrera</td>
+                   <td><input id="nota1_est15" name="nota1_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est15" name="nota2_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est15" name="nota3_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est15" name="nota4_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est15" name="nota5_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est15" name="nota6_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est15" name="nota7_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est15" name="nota8_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est15" name="nota9_est15" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
                 <tr>
-                    <td>16</td>
-                    <td>1000678990</td>
-                    <td>Juan Pablo Henao</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
+                    <td style="background-color: rgb(255, 255, 255);text-align: center;">16</td>
+                    <td style=" text-align: center;">1000678990</td>
+                    <td style="background-color: rgb(255, 255, 255); text-align: center;">Juan Pablo Henao</td>
+                      <td><input id="nota1_est16" name="nota1_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota2_est16" name="nota2_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota3_est16" name="nota3_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota4_est16" name="nota4_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota5_est16" name="nota5_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota6_est16" name="nota6_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota7_est16" name="nota7_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota8_est16" name="nota8_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
+                        <td><input id="nota9_est16" name="nota9_est16" type="number" style="width: 3rem;" min="0" max="5.0"></td>
                 </tr>
-                <tr>
-                    <td>17</td>
-                    <td>1000897432</td>
-                    <td>Tomás Pérez Zapata</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>1000345678</td>
-                    <td>Isabella Marín Herrera</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>1000678990</td>
-                    <td>Juan Pablo Henao</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>1000897432</td>
-                    <td>Tomás Pérez Zapata</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>21</td>
-                    <td>1000345678</td>
-                    <td>Isabella Marín Herrera</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>22</td>
-                    <td>1000678990</td>
-                    <td>Juan Pablo Henao</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>23</td>
-                    <td>1000897432</td>
-                    <td>Tomás Pérez Zapata</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>24</td>
-                    <td>1000345678</td>
-                    <td>Isabella Marín Herrera</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>1000678990</td>
-                    <td>Juan Pablo Henao</td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                    <td><input type="number" style="width: 3rem" min="0" max="5.0"></td>
-                </tr>
+                
             </tbody>
             </table>
-            <button class="container-table__botom">Guardar</button>
+            <button id="button" type="submit" class="container-table__botom">Guardar</button>
+
     </main>
 
 </div>
@@ -552,5 +333,6 @@
     <h4>Políticas de privacidad</h4>
     <h4>Términos y condiciones</h4>
 </footer>
+<script type="module" src="../assets/javascript/notas.js"></script>
 </body>
 </html>
